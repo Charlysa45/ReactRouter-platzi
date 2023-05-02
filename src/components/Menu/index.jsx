@@ -68,13 +68,3 @@ const routes = [
         text: 'Profile',
     },
 ]
-routes.push({
-})
-routes.push({
-  to: '/blog',
-  text: 'Blog',
-})
-routes.push({
-  to: '/profile',
-  text: 'Profile',
-})
