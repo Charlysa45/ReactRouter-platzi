@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router-dom"
 
 export const Menu = () => {
   return (
@@ -8,7 +8,7 @@ export const Menu = () => {
           <li key={route.text}>
             <NavLink
               to={route.to}
-              style={({ isActive }) => ({ color: isActive ? 'red' : 'blue' })}
+              style={({ isActive }) => ({ color: isActive ? "red" : "blue" })}
             >
               {route.text}
             </NavLink>
@@ -55,16 +55,24 @@ export const Menu = () => {
 }
 
 const routes = [
-    {
-        to: '/',
-        text: 'Home',
-    },
-    {
-        to: '/blog',
-        text: 'Blog',
-    },
-    {
-        to: '/profile',
-        text: 'Profile',
-    },
+  {
+    to: "/",
+    text: "Home",
+  },
+  {
+    to: "/blog",
+    text: "Blog",
+  },
+  {
+    to: "/profile",
+    text: "Profile",
+  },
+  {
+    to: "/login",
+    text: "Login",
+  },
+  {
+    to: "/logout",
+    text: "Logout",
+  },
 ]
