@@ -9,6 +9,7 @@ import { LogoutPage } from "./views/LogoutPage"
 
 import "./App.css"
 import { AuthProvider } from "./context/Auth"
+import { AuthRoute } from "./components/AuthRoute"
 function App() {
   return (
     <HashRouter>
@@ -23,9 +24,23 @@ function App() {
           </Route>
 
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/logout" element={<LogoutPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
 
+          <Route
+            path="/logout"
+            element={
+              <AuthRoute>
+                <LogoutPage />
+              </AuthRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <AuthRoute>
+                <ProfilePage />
+              </AuthRoute>
+            }
+          />
           <Route path="*" element0={<p>Not Found</p>} />
         </Routes>
       </AuthProvider>
